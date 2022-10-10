@@ -14,7 +14,7 @@
  
 
 
-## Authors
+## Colaboradores
 
 - [@CarlosMonteroMarin](https://github.com/CarlosMonteroMarin)
 - [@DaniMartos23](https://github.com/DaniMartos23)
