@@ -14,7 +14,7 @@ public class mainApp {
 
 	private static void imprimePrecioFinal(String[] preciofinal) {
 		// Método que imprime el precio final
-		for(int i=0;i<preciofinal[0].length();i++) {
+		for(int i=0;i<preciofinal.length;i++) {
 			System.out.println(preciofinal[i]);
 		}
 		
