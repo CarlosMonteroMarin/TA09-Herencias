@@ -82,6 +82,49 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 	
+	
+	//Método precio final
+	public double precioFinal() {
+		double sumaPrecio=this.precioBase;
+		
+		switch(this.consumoEnergetico) {
+		case 'A':
+			sumaPrecio+=100;
+			break;
+		case 'B':
+			sumaPrecio+=80;
+			break;
+		case 'C':
+			sumaPrecio+=60;
+			break;
+		case 'D':
+			sumaPrecio+=50;
+			break;
+		case 'E':
+			sumaPrecio+=30;
+			break;
+		case 'F':
+			sumaPrecio+=10;
+			break;
+		default:
+			break;
+		}
+		
+		if(this.peso>= 0 && this.peso<=19) {
+			sumaPrecio += 10; 
+		}else if(this.peso>= 20 && this.peso<=49) {
+			sumaPrecio += 50; 
+		}
+		else if(this.peso>= 50 && this.peso<=79) {
+			sumaPrecio += 80; 
+		}else {
+			sumaPrecio += 100; 
+		}
+		
+		return sumaPrecio;
+	}
+	
+	
 	// Método para comprobar el color
 	public boolean comprobarColor(String color) {
 		if (color.equals("blanco") || color.equals("negro") || color.equals("rojo")|| color.equals("azul") || color.equals("gris")) {
