@@ -46,11 +46,17 @@ public class mainApp {
 	private static Electrodomestico[] creaArray() {
 		// Método que crea la array de electrodomesticos
 		Electrodomestico[] electro = new Electrodomestico[10];
-		for(int i=0;i<10;i++) {
-			if(i%3==0) electro[i]= new Electrodomestico();
-			else if(i%3==1) electro[i]=new Television();
-			else electro[i]=new Lavadora();
-		}
+		
+			electro[0]= new Electrodomestico();
+			electro[1]=new Television();
+			electro[2]=new Lavadora();
+			electro[3]=new Electrodomestico(200.5,300);
+			electro[4]=new Lavadora(250,70);
+			electro[5]=new Television(400,50);
+			electro[6]=new Electrodomestico(450,"ROJO",'B',200);
+			electro[7]=new Television(60,true,550,"NEGRO",'A',50);
+			electro[8]=new Lavadora(200,"Blanco",'C',70,200);
+			electro[9]=new Television();
 		return electro;
 	}
 	
