@@ -38,7 +38,13 @@ public class Electrodomestico {
 		}else {
 			this.color = COLOR_D;
 		}
-		this.consumoEnergetico = consumoEnergetico;
+		
+		if(comprobarConsumoEnergetico(Character.toUpperCase(consumoEnergetico))) {
+			this.consumoEnergetico = Character.toUpperCase(consumoEnergetico);
+		}else {
+			this.consumoEnergetico = CONSUMO_ENERGETICO_D;
+		}
+		
 		this.peso = peso;
 	}
 	
@@ -84,4 +90,14 @@ public class Electrodomestico {
 			return false;
 		}
 	}
+	
+	//Método para comprobar el valor energético
+	public boolean comprobarConsumoEnergetico(char consumoEnergetico) {
+		if (consumoEnergetico == 'A'|| consumoEnergetico == 'B' || consumoEnergetico == 'C'|| consumoEnergetico == 'D' || consumoEnergetico == 'E' || consumoEnergetico == 'F') {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
 }
