@@ -1,6 +1,6 @@
 package ex5;
 
-public abstract class personas {
+public abstract class Persona {
 	
 	//Atributos
 	protected String nombre;
@@ -13,14 +13,14 @@ public abstract class personas {
 	//Constructores
 	
 	//Constructor basico
-	public personas() {
+	public Persona() {
 		this.nombre = "";
 		this.edad = 0;
 		this.sexo = SEXO_D;
 	}
 	
 	//Constructor con todos los atributos
-	public personas(String nombre,int edad,String sexo) {
+	public Persona(String nombre,int edad,String sexo) {
 		this.nombre = "";
 		this.edad = 0;
 		this.sexo = sexo;
