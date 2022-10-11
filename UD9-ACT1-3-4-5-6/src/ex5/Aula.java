@@ -34,8 +34,22 @@ public class Aula {
 				i++;
 			}
 			if(numalum<(m_alumno.length*0.5)) return false;
-			else return true;
+			else{
+				muestraNotas();
+				return true;
+			};
 		}
+	}
+	private void muestraNotas() {
+		// Método que muestra las notas de los aprovados de la clase
+		
+		for(int i=0;i<this.m_alumno.length;i++) {
+			if(this.m_alumno[i].getNotaActual()>=5 && this.m_alumno[i].getSexo()=="hombre") System.out.println(this.m_alumno[i]);
+		}
+		for(int i=0;i<this.m_alumno.length;i++) {
+			if(this.m_alumno[i].getNotaActual()>=5 && this.m_alumno[i].getSexo()=="mujer") System.out.println(this.m_alumno[i]);
+		}
+		
 	}
 	public int get_NumMax() {
 		return m_nummax;
