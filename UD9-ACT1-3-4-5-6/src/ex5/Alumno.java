@@ -43,9 +43,9 @@ public class Alumno extends Persona {
 	//si sale 1 retornara true y habrá asistido a clase
 	@Override
 	public boolean asistencia() {
-		int random=(int) (Math.random());
+		int random=(int) (Math.random()*100);
 		
-		return random==0?false:true;
+		return random<50?false:true;
 	}
 	
 	

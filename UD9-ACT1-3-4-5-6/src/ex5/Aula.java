@@ -42,12 +42,13 @@ public class Aula {
 	}
 	private void muestraNotas() {
 		// Método que muestra las notas de los aprovados de la clase
-		
+		System.out.println("-------------------------------Alumnos hombres aprobados-------------------------------");
 		for(int i=0;i<this.m_alumno.length;i++) {
-			if(this.m_alumno[i].getNotaActual()>=5 && this.m_alumno[i].getSexo()=="hombre") System.out.println(this.m_alumno[i]);
+			if(this.m_alumno[i].getNotaActual()>=5 && this.m_alumno[i].getSexo().equals("hombre")) System.out.println(this.m_alumno[i]);
 		}
+		System.out.println("-------------------------------Alumnas mujeres aprobadas-------------------------------");
 		for(int i=0;i<this.m_alumno.length;i++) {
-			if(this.m_alumno[i].getNotaActual()>=5 && this.m_alumno[i].getSexo()=="mujer") System.out.println(this.m_alumno[i]);
+			if(this.m_alumno[i].getNotaActual()>=5 && this.m_alumno[i].getSexo().equals("mujer")) System.out.println(this.m_alumno[i]);
 		}
 		
 	}

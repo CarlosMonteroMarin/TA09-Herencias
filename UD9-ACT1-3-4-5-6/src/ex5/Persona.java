@@ -21,8 +21,8 @@ public abstract class Persona {
 	
 	//Constructor con todos los atributos
 	public Persona(String nombre,int edad,String sexo) {
-		this.nombre = "";
-		this.edad = 0;
+		this.nombre = nombre;
+		this.edad = edad;
 		this.sexo = sexo;
 	}
 	

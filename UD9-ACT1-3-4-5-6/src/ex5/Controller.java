@@ -9,7 +9,7 @@ public class Controller {
 		
 		Aula[] aulas=creaArrays();
 		for (int i=0; i<aulas.length;i++) {
-			System.out.println("Aula "+i+1+"\n");
+			System.out.println("-------------------------Aula "+(i+1)+"-------------------------\n");
 			if(!(aulas[i].hayClase())) {
 				System.out.println("No puede haber clase");
 			}
@@ -40,7 +40,7 @@ public class Controller {
 		VariablesEnum.Sexo[] sexo = VariablesEnum.Sexo.values();
 		String ssexo= ""+sexo[rdm.nextInt(sexo.length)];
 		String nombre;
-		if(ssexo=="hombre") {
+		if(ssexo.equals("hombre")) {
 			nombre= ""+VariablesEnum.Alumnosm.values()[rdm.nextInt(VariablesEnum.Alumnosm.values().length)];
 		}
 		else {
@@ -57,13 +57,13 @@ public class Controller {
 			VariablesEnum.Sexo[] sexo = VariablesEnum.Sexo.values();
 			String ssexo= ""+sexo[rdm.nextInt(sexo.length)];
 			String nombre;
-			if(ssexo=="hombre") {
+			if(ssexo.equals("hombre")) {
 				nombre= ""+VariablesEnum.Alumnosm.values()[rdm.nextInt(VariablesEnum.Alumnosm.values().length)];
 			}
 			else {
 				nombre= ""+VariablesEnum.Alumnosf.values()[rdm.nextInt(VariablesEnum.Alumnosf.values().length)];
 			}
-			int edad= (int) (Math.random()*(70-20+1)+20);
+			int edad= (int) (Math.random()*(18-5+1)+5);
 			int nota= (int)(Math.random()*10);	
 			alum[i]= new Alumno(nota,nombre,edad,ssexo);
 		}
