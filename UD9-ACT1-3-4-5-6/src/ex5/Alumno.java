@@ -13,10 +13,17 @@ public class Alumno extends Persona {
 	
 	}
 	
-	
+	//Constructor con herencia.
+	//si el metodo controlNota retorna true imprimira la nota correcta,
+	//si el  metodo controlNota retorna false imprimira una nota por defecto de 0
 	public Alumno(int notaActual, String nombre, int edad, String sexo) {
 		super(nombre, edad, sexo);
-		this.notaActual = notaActual;
+		if (controlNota(notaActual)==true) {
+			this.notaActual = notaActual;
+		}else {
+			this.notaActual=0;
+		}
+		
 	}
 
 
@@ -41,5 +48,19 @@ public class Alumno extends Persona {
 		return random==0?false:true;
 	}
 	
+	
+	
+	//Método para comrpobar si la nota esta en el rango entre 0 y 10
+	//de ser así retorna true de no ser así retorna false
+	public boolean controlNota(int notaActual) {
+		return notaActual<=10?true:false;
+		
+	}
+	
+	//Sobrescribimos el método toString para formatear la salida por pantalla del objeto alumno.
+	@Override
+	public String toString() {
+		return "----Alumno----"+"\nNombre: "+nombre+"\nEdad: "+edad+"\nSexo: "+sexo+"\nNota actual: "+notaActual+"\n";
+	}
 	
 }

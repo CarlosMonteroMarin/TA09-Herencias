@@ -1,18 +1,25 @@
 package ex5;
 
 public class Profesor extends Persona {
+	//Atributos
 	private String materia;
 
-	
+	//Constructores
 	public Profesor() {
 		super();
 		this.materia="";
 	}
 
-	
+	//Constructor con herencia,
+	//Si el método controlMateria retorna true imprimirá la materia pasada,
+	//Si el método controlMateria retorna false imrpimirá "Materia no correcta"
 	public Profesor(String materia, String nombre, int edad, String sexo) {
 		super(nombre, edad, sexo);
-		this.materia = materia;
+		if (controlMateria(materia.toLowerCase())==true) {
+			this.materia = materia;
+		}else {
+			this.materia="Materia no correcta";
+		}
 	}
 
 	
@@ -34,4 +41,24 @@ public class Profesor extends Persona {
 		
 		return random<=20?false:true;
 	}
+	
+	//Método para comprobar que la materia es correcta
+	//de ser correcta retorna true de no serlo retorna false
+	public boolean controlMateria(String materia) {
+		if (materia.equals("matemáticas") || materia.equals("filosofía")||materia.equals("física")) {
+			return true;
+		}
+		
+		return false;
+	}
+
+	
+	//Sobrescribimos el método toString para formatear la salida por pantalla del objeto profesor.
+	@Override
+	public String toString() {
+		return "----Profesor----"+"\nNombre: "+nombre+"\nEdad: "+edad+"\nSexo: "+sexo+"\nMateria: "+materia+"\n";
+	}
+	
+	
+	
 }
