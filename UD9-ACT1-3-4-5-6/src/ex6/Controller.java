@@ -59,7 +59,7 @@ public class Controller {
 
 	private static Espectador[] creaEspectador() {
 		// método que crea una matriz de espectadores random
-		Espectador[] espec= new Espectador[(int)(Math.random()*(25-5+1)+5)];
+		Espectador[] espec= new Espectador[(int)(Math.random()*(150-5+1)+5)];
 		String nombre;
 		int edad;
 		double dinero;
